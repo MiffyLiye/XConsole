@@ -11,7 +11,7 @@ XConsole is a library for testing console interactions.
 * Test Framework: xUnit
 
 ## How to use
-See projects in test folder.
+See projects in example folder.
 
 ## Development tools
 * Visual Studio Code with C# extension (powered by OmniSharp)
