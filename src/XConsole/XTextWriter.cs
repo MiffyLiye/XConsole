@@ -44,7 +44,7 @@ namespace MiffyLiye.XConsole
 
         public override void WriteLine(string value)
         {
-            Write(value + Environment.NewLine);
+            Write(value + NewLine);
         }
 
         public override void WriteLine()
