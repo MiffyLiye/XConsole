@@ -1,0 +1,31 @@
+language: generic
+
+addons:
+  apt:
+    packages:
+    - gettext
+    - libcurl4-openssl-dev
+    - libicu-dev
+    - libssl-dev
+    - libunwind8
+    - zlib1g
+
+matrix:
+  include:
+    - os: linux
+      dist: trusty
+      sudo: required
+
+before install:
+  - sudo sh -c 'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet-release/ trusty main" > /etc/apt/sources.list.d/dotnetdev.list'
+  - sudo apt-key adv --keyserver apt-mo.trafficmanager.net --recv-keys 417A0893
+  - sudo apt-get update
+
+install:
+  - sudo apt-get install dotnet-dev-1.0.0-preview2-003121
+
+script:
+  - dotnet --info
+  - dotnet restore
+  - dotnet test test/XConsoleTest
+  - dotnet test example/LibraryTest
