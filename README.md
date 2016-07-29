@@ -1,6 +1,7 @@
 # XConsole 
 
 [![Build Status](https://travis-ci.org/MiffyLiye/XConsole.svg?branch=master)](https://travis-ci.org/MiffyLiye/XConsole)
+[![Build status](https://ci.appveyor.com/api/projects/status/8dj6gy3xnntoh32n/branch/master?svg=true)](https://ci.appveyor.com/project/MiffyLiye/xconsole/branch/master)
 
 XConsole is a library for testing console interactions.
 
