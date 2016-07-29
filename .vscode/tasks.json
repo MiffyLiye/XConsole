@@ -1,0 +1,29 @@
+{
+    "version": "0.1.0",
+    "command": "dotnet",
+    "isShellCommand": true,
+    "args": [],
+    "tasks": [
+        {
+            "suppressTaskName": true,
+            "taskName": "restore",
+            "args": ["restore"],
+            "isBuildCommand": true,
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "suppressTaskName": true,
+            "taskName": "test",
+            "args": ["test", "test/XConsoleTest"],
+            "isBuildCommand": false,
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "suppressTaskName": true,
+            "taskName": "example",
+            "args": ["test", "example/LibraryTest"],
+            "isBuildCommand": false,
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}
