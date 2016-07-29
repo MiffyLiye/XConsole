@@ -17,15 +17,15 @@ matrix:
       sudo: required
 
 before install:
-  - sudo sh -c 'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet-release/ trusty main" > /etc/apt/sources.list.d/dotnetdev.list'
-  - sudo apt-key adv --keyserver apt-mo.trafficmanager.net --recv-keys 417A0893
-  - sudo apt-get update
+  - chmod 755 ./.vscode/dotnet-install.sh
 
 install:
-  - sudo apt-get install dotnet-dev-1.0.0-preview2-003121
+  - ./.vscode/dotnet-install.sh --channel preview --install-dir ./.vscode/cli
+
+
 
 script:
-  - dotnet --info
-  - dotnet restore
-  - dotnet test test/XConsoleTest
-  - dotnet test example/LibraryTest
+  - ./.vscode/cli/dotnet --info
+  - ./.vscode/cli/dotnet restore
+  - ./.vscode/cli/dotnet test test/XConsoleTest
+  - ./.vscode/cli/dotnet test example/LibraryTest
