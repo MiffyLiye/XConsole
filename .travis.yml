@@ -3,6 +3,7 @@ language: generic
 addons:
   apt:
     packages:
+    - curl
     - gettext
     - libcurl4-openssl-dev
     - libicu-dev
@@ -16,13 +17,8 @@ matrix:
       dist: trusty
       sudo: required
 
-before install:
-  - chmod 755 ./.vscode/dotnet-install.sh
-
 install:
-  - ./.vscode/dotnet-install.sh --channel preview --install-dir ./.vscode/cli
-
-
+  - curl -sSL https://raw.githubusercontent.com/dotnet/cli/rel/1.0.0/scripts/obtain/dotnet-install.sh | bash /dev/stdin --version 1.0.0-preview2-003121 --install-dir ./.vscode/cli
 
 script:
   - ./.vscode/cli/dotnet --info
