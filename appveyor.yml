@@ -6,6 +6,10 @@ init:
 build_script:
   - ps: dotnet --info
   - ps: dotnet restore
+  - ps: dotnet build .\src\XConsole\project.json
+  - ps: dotnet build .\test\XConsoleTest\project.json
+  - ps: dotnet build .\example\LibraryTest\project.json
+  - ps: dotnet build .\example\Library\project.json
 
 test_script:
   - ps: dotnet test .\test\XConsoleTest
