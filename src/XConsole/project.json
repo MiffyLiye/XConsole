@@ -1,5 +1,6 @@
 {
-  "version": "1.0.0-*",
+  "name": "MiffyLiye.XConsole",
+  "version": "0.1.2-*",
   "buildOptions": {
     "debugType": "portable",
     "emitEntryPoint": false
