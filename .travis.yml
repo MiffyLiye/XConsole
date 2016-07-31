@@ -23,9 +23,6 @@ install:
 script:
   - ./.vscode/cli/dotnet --info
   - ./.vscode/cli/dotnet restore
-  - ./.vscode/cli/dotnet build src/XConsole/project.json
-  - ./.vscode/cli/dotnet build test/XConsoleTest/project.json
-  - ./.vscode/cli/dotnet build example/LibraryTest/project.json
-  - ./.vscode/cli/dotnet build example/Library/project.json
+  - ./.vscode/cli/dotnet build */*/project.json
   - ./.vscode/cli/dotnet test test/XConsoleTest
   - ./.vscode/cli/dotnet test example/LibraryTest
