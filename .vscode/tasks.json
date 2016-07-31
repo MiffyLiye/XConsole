@@ -13,6 +13,13 @@
         },
         {
             "suppressTaskName": true,
+            "taskName": "build",
+            "args": ["build", "*/*/project.json"],
+            "isBuildCommand": true,
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "suppressTaskName": true,
             "taskName": "test",
             "args": ["test", "test/XConsoleTest"],
             "isBuildCommand": false,
