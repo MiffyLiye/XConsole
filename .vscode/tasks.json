@@ -31,6 +31,14 @@
             "args": ["test", "example/LibraryTest"],
             "isBuildCommand": false,
             "problemMatcher": "$msCompile"
+        },
+        {
+            "suppressTaskName": true,
+            "taskName": "package",
+            "args": ["pack", "-c", "Release", "src/XConsole/project.json"],
+            "isBuildCommand": false,
+            "isTestCommand": false,
+            "problemMatcher": "$msCompile"
         }
     ]
 }
