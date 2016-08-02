@@ -1,18 +1,16 @@
 {
   "name": "MiffyLiye.XConsole",
-  "version": "0.1.2-*",
+  "version": "0.1.3-*",
   "buildOptions": {
     "debugType": "portable",
     "emitEntryPoint": false
   },
   "dependencies": {},
   "frameworks": {
-    "netcoreapp1.0": {
+    "netstandard1.6": {
       "dependencies": {
-        "Microsoft.NETCore.App": {
-          "type": "platform",
-          "version": "1.0.0"
-        }
+        "NETStandard.Library": "1.6.0",
+        "System.Threading.Thread": "4.0.0"
       },
       "imports": "dnxcore50"
     }
