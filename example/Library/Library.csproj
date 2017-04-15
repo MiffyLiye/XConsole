@@ -5,7 +5,7 @@
     <DebugType>portable</DebugType>
     <AssemblyName>Library</AssemblyName>
     <PackageId>Library</PackageId>
-    <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
+    <NetStandardImplicitPackageVersion>1.6.1</NetStandardImplicitPackageVersion>
   </PropertyGroup>
 
 </Project>
