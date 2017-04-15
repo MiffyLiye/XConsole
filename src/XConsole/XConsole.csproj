@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>A library for testing console interactions</Description>
+    <Copyright>Copyright 2016 MiffyLiye</Copyright>
+    <AssemblyTitle>XConsole</AssemblyTitle>
+    <VersionPrefix>0.1.4</VersionPrefix>
+    <Authors>MiffyLiye</Authors>
+    <TargetFrameworks>net45;net46;netstandard1.6</TargetFrameworks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>portable</DebugType>
+    <AssemblyName>MiffyLiye.XConsole</AssemblyName>
+    <OutputType>Library</OutputType>
+    <PackageId>XConsole</PackageId>
+    <PackageLicenseUrl>https://github.com/MiffyLiye/XConsole/LICENSE</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/MiffyLiye/XConsole</RepositoryUrl>
+    <NetStandardImplicitPackageVersion Condition=" '$(TargetFramework)' == 'netstandard1.6' ">1.6.0</NetStandardImplicitPackageVersion>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net46' ">
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <DefineConstants>$(DefineConstants);NET45</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net46' ">
+    <DefineConstants>$(DefineConstants);NET46</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.6' ">
+    <PackageReference Include="System.Threading.Thread" Version="4.0.0" />
+  </ItemGroup>
+
+</Project>

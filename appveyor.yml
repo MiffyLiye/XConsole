@@ -1,13 +1,12 @@
-init:
-  - ps: Invoke-WebRequest "https://raw.githubusercontent.com/dotnet/cli/rel/1.0.0/scripts/obtain/dotnet-install.ps1" -OutFile ".\dotnet-install.ps1"
-  - ps: .\dotnet-install.ps1 -Version 1.0.0-preview2-003121
-  - ps: Remove-Item .\dotnet-install.ps1
-
+version: 1.0.{build}
+configuration:
+- Release
+platform: Any CPU
+before_build:
+- ps: dotnet --info
+- ps: dotnet restore
 build_script:
-  - ps: dotnet --info
-  - ps: dotnet restore
-  - ps: dotnet build .\*\*\project.json
-
+- ps: dotnet build -c $env:CONFIGURATION
 test_script:
-  - ps: dotnet test .\test\XConsoleTest
-  - ps: dotnet test .\example\LibraryTest
+  - ps: dotnet test -c $env:CONFIGURATION .\test\XConsoleTest\XConsoleTest.csproj
+  - ps: dotnet test -c $env:CONFIGURATION .\example\LibraryTest\LibraryTest.csproj

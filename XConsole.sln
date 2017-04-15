@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "XConsole", "src\XConsole\XConsole.xproj", "{DA798C81-C1CC-4FAE-AFA2-4E7E4BF0FC53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XConsole", "src\XConsole\XConsole.csproj", "{DA798C81-C1CC-4FAE-AFA2-4E7E4BF0FC53}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "XConsoleTest", "test\XConsoleTest\XConsoleTest.xproj", "{60408107-1F34-4B21-A5E4-A043CB4D38B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XConsoleTest", "test\XConsoleTest\XConsoleTest.csproj", "{60408107-1F34-4B21-A5E4-A043CB4D38B5}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Library", "example\Library\Library.xproj", "{26E7D879-BCF3-4C10-B22B-C31C5A8B6C6A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Library", "example\Library\Library.csproj", "{26E7D879-BCF3-4C10-B22B-C31C5A8B6C6A}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "LibraryTest", "example\LibraryTest\LibraryTest.xproj", "{6BA867D5-A123-4248-9AEF-68176C10CAA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryTest", "example\LibraryTest\LibraryTest.csproj", "{6BA867D5-A123-4248-9AEF-68176C10CAA6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
